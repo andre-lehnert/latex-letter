@@ -1,0 +1,101 @@
+\documentclass[german]{tfbrief}
+\usepackage[ngerman]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{lipsum} % Beispiel
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Absender
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\logo{\Huge\LaTeX}
+
+\fromname{Vorname Name}
+%\fromdegreepre{Dr.}
+%\fromdegreepost{}
+%\fromtitle{Titel}
+\fromstreet{Straße 32a}
+\fromcity{Ort}
+\fromcitycode{12345}
+\fromcitycc{D}
+%\fromcountry{Germany}
+
+\fromphone{+ 49 1234 / 555 555}
+\fromfax{+ 49 1234 / 555 556}
+\frommobile{+ 49 123 / 666 666 66}
+\fromemail{mail@example.com}
+\fromwww{http://example.com}
+
+%\ourref{REF-1234-555}
+
+\newcommand \depositor {Kontoinhaber}
+\newcommand \accountNumber {123 456 789}
+\newcommand \bankCode {123 456 78}
+\newcommand \iban {DE99 123 456 78 123 456 789}
+\newcommand \bic {XXXXXXXX}
+\newcommand \bank {Sparkasse XY}
+
+%\settowidth{\fromwidth}{XXXXXXXXXXXXXXXXXXXXX}
+
+\footer[2cm]{
+	\protect\begin{center}
+	\protect\begin{tabular}{llllll}
+		Kontoinhaber 	& \depositor 		& Kontonummer 	& \accountNumber & IBAN 	& \iban \\
+		Bank 			& \bank 			& BLZ			& \bankCode  & BIC		& \bic \\	
+	\protect\end{tabular}
+	\protect\end{center}
+}
+
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Empfänger
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\toname{Empfänger\\z.H. Max Muster}
+\tostreet{Straße 32a}
+\tocity{Ort}
+\tocitycode{12345}
+\tocitycc{D}
+%\tocountry{Germany}
+
+%\tofax{+ 49 1234 / 555 777} % per FAX
+%\yourref{REF-6666-555}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Brief
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subject{Betreff}
+\greeting{Sehr geehrte Damen und Herren,}
+\leave{Mit freundlichem Grüßen,}
+
+\begin{document}
+\begin{letter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Brieftext
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lipsum
+
+\end{letter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Anhang
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\enlargethispage{1cm} % Rückt den Anhang tiefer nach unten
+
+\begin{attachment}
+\item Dokument 1
+\item Dokument 2
+\end{attachment}
+
+\end{document}
