@@ -11,9 +11,6 @@
 \ProvidesClass{tfbrief}[2011/10/03 TF-Brief]
 
 \DeclareOption{german}{%
-\PassOptionsToClass{german}{babel}%
-}
-\DeclareOption{ngerman}{%
 \PassOptionsToClass{ngerman}{babel}%
 }
 
@@ -46,7 +43,7 @@
   \renewcommand{\labelviaemailto}[1]{sent via EMAIL to #1}%
   \renewcommand{\labelfromanddate}[2]{#2}% no location for English letters
   \renewcommand{\labelgreeting}{Dear Sir/Madam}
-  \renewcommand{\labelleave}{Sincerely}
+  \renewcommand{\labelleave}{Sincerely,}
   \renewcommand{\labelattachment}{Attachments}
 }
 
@@ -116,11 +113,6 @@
 % expansion.
 % http://tug.ctan.org/info?id=microtype
 \RequirePackage{microtype}
-
-% There are problems in LaTeX that it "would be nice" to correct;
-% fixltx2e provides a home for these corrections.
-% http://tug.ctan.org/info?id=fixltx2e
-\RequirePackage{fixltx2e}
 
 % Implements a workaround for the LaTeX bug that marginpars will
 % sometimes come out at the wrong margin.
@@ -215,7 +207,7 @@
 \renewcommand{\date}[1]{\AtBeginDocument{\renewcommand{\TheDate}{#1}}}
 \newcommand{\TheGreeting}{\labelgreeting,}
 \newcommand{\greeting}[1]{\AtBeginDocument{\renewcommand{\TheGreeting}{#1}}}
-\newcommand{\TheLeave}{\labelleave,}
+\newcommand{\TheLeave}{\labelleave}
 \newcommand{\leave}[1]{\AtBeginDocument{\renewcommand{\TheLeave}{#1}}}
 \newcommand{\TheSignature}{\vspace{1cm}}
 \newcommand{\signature}[1]{\AtBeginDocument{\renewcommand{\TheSignature}{#1}}}
@@ -339,7 +331,7 @@
 
 \vspace{2cm plus 3.5cm minus 1.75cm}
 
-{\bfseries \TheSubject}
+{\bfseries \sffamily \TheSubject}
 
 \vspace{1cm plus 1cm minus 0.75cm}
 
