@@ -20,18 +20,18 @@ Option | Funktion
 ```latex
 \documentclass[options]{tfbrief}
 
-\usepackage{...}
+\usepackage{}
 
 % Absenderinformationen
-\fromname{...}
-\fromstreet{...}
-\fromcity{...}
+\fromname{}
+\fromstreet{}
+\fromcity{}
 ...
 
 % Empfängerinformationen
-\toname{...}
-\tostreet{...}
-\tocity{...}
+\toname{}
+\tostreet{}
+\tocity{}
 ...
 ```
 
@@ -99,7 +99,7 @@ Text der Fußzeile
 
 #### Anlagen
 
-Eine Liste von Dokumenten im Anhang kann mit der *attachment*-Umgebung angegeben werden:
+Eine Liste von Dokumenten im Anhang kann mit der *attachment*-Umgebung hinter der *letter*-Umgebung angefügt werden:
 
 ```latex
 \begin{attachment}
@@ -112,4 +112,3 @@ Eine Liste von Dokumenten im Anhang kann mit der *attachment*-Umgebung angegeben
 
 * [letter.tex](letter.tex), [PDF](letter.pdf)
 * [letter_simple.tex](letter_simple.tex), [PDF](letter_simple.pdf)
-

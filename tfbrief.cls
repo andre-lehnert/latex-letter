@@ -189,10 +189,8 @@
 \newcommand{\tostreet}[1]{\AtBeginDocument{\renewcommand{\TheToStreet}{#1}}}
 \newcommand{\TheToCityCC}{}
 \newcommand{\tocitycc}[1]{\AtBeginDocument{\renewcommand{\TheToCityCC}{#1}}}
-\newcommand{\TheToCityShort}{}
-\newcommand{\tocityshort}[1]{\AtBeginDocument{\renewcommand{\TheToCityShort}{#1}}}
 \newcommand{\TheToCity}{}
-\newcommand{\tocity}[2][]{\AtBeginDocument{\renewcommand{\TheToCity}{#2}\ifthenelse{\equal{#1}{}}{}{\renewcommand{\TheToCityShort}{#1}}}}
+\newcommand{\tocity}[1]{\AtBeginDocument{\renewcommand{\TheToCity}{#1}}}
 \newcommand{\TheToCityCode}{}
 \newcommand{\tocitycode}[1]{\AtBeginDocument{\renewcommand{\TheToCityCode}{#1}}}
 \newcommand{\TheToCountry}{}
