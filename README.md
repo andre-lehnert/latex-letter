@@ -37,7 +37,7 @@ Option | Funktion
 
 Absenderattribute beginnen mit `\from`, Empfängerattribute mit `\to`. Es muss mindestens jeweils ein Name angegeben werden, folgende Eigenschaften sind möglich:
 
- | Absender | Empfänger
+&nbsp; | Absender | Empfänger
 --- | --- | ---
 Name | fromname, fromnameshort¹, fromdegreepre², fromdegreepost², fromtitle² | toname
 Adresse | fromstreet, fromstreetshort¹, fromcity, fromcityshort¹, fromcitycode, fromcitycc³, fromcountry | tostreet, tocity, tocitycode, tocitycc³, tocountry
