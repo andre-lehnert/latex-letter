@@ -218,7 +218,7 @@
 \ifthenelse{\equal{\flagfromheadernarrow}{}}{%
 \ifthenelse{\equal{#1}{}}{}{\hspace*{-2cm}\makebox[2cm][r]{\itshape\footnotesize{}#1\hspace{1em}}#2\\}%
 }{%
-\ifthenelse{\equal{#1}{}}{}{{\itshape\footnotesize\vspace*{-0.25em}#1}\\a#2\\}%
+\ifthenelse{\equal{#1}{}}{}{{\itshape\footnotesize\vspace*{-0.25em}#1}\\#2\\}%
 }
 }
 
