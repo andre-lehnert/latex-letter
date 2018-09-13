@@ -11,9 +11,6 @@
 \ProvidesClass{tfbrief}[2011/10/03 TF-Brief]
 
 \DeclareOption{german}{%
-\PassOptionsToClass{german}{babel}%
-}
-\DeclareOption{ngerman}{%
 \PassOptionsToClass{ngerman}{babel}%
 }
 
@@ -46,7 +43,7 @@
   \renewcommand{\labelviaemailto}[1]{sent via EMAIL to #1}%
   \renewcommand{\labelfromanddate}[2]{#2}% no location for English letters
   \renewcommand{\labelgreeting}{Dear Sir/Madam}
-  \renewcommand{\labelleave}{Sincerely}
+  \renewcommand{\labelleave}{Sincerely,}
   \renewcommand{\labelattachment}{Attachments}
 }
 
@@ -116,11 +113,6 @@
 % expansion.
 % http://tug.ctan.org/info?id=microtype
 \RequirePackage{microtype}
-
-% There are problems in LaTeX that it "would be nice" to correct;
-% fixltx2e provides a home for these corrections.
-% http://tug.ctan.org/info?id=fixltx2e
-\RequirePackage{fixltx2e}
 
 % Implements a workaround for the LaTeX bug that marginpars will
 % sometimes come out at the wrong margin.
@@ -197,10 +189,8 @@
 \newcommand{\tostreet}[1]{\AtBeginDocument{\renewcommand{\TheToStreet}{#1}}}
 \newcommand{\TheToCityCC}{}
 \newcommand{\tocitycc}[1]{\AtBeginDocument{\renewcommand{\TheToCityCC}{#1}}}
-\newcommand{\TheToCityShort}{}
-\newcommand{\tocityshort}[1]{\AtBeginDocument{\renewcommand{\TheToCityShort}{#1}}}
 \newcommand{\TheToCity}{}
-\newcommand{\tocity}[2][]{\AtBeginDocument{\renewcommand{\TheToCity}{#2}\ifthenelse{\equal{#1}{}}{}{\renewcommand{\TheToCityShort}{#1}}}}
+\newcommand{\tocity}[1]{\AtBeginDocument{\renewcommand{\TheToCity}{#1}}}
 \newcommand{\TheToCityCode}{}
 \newcommand{\tocitycode}[1]{\AtBeginDocument{\renewcommand{\TheToCityCode}{#1}}}
 \newcommand{\TheToCountry}{}
@@ -215,7 +205,7 @@
 \renewcommand{\date}[1]{\AtBeginDocument{\renewcommand{\TheDate}{#1}}}
 \newcommand{\TheGreeting}{\labelgreeting,}
 \newcommand{\greeting}[1]{\AtBeginDocument{\renewcommand{\TheGreeting}{#1}}}
-\newcommand{\TheLeave}{\labelleave,}
+\newcommand{\TheLeave}{\labelleave}
 \newcommand{\leave}[1]{\AtBeginDocument{\renewcommand{\TheLeave}{#1}}}
 \newcommand{\TheSignature}{\vspace{1cm}}
 \newcommand{\signature}[1]{\AtBeginDocument{\renewcommand{\TheSignature}{#1}}}
@@ -226,7 +216,7 @@
 \ifthenelse{\equal{\flagfromheadernarrow}{}}{%
 \ifthenelse{\equal{#1}{}}{}{\hspace*{-2cm}\makebox[2cm][r]{\itshape\footnotesize{}#1\hspace{1em}}#2\\}%
 }{%
-\ifthenelse{\equal{#1}{}}{}{{\itshape\footnotesize\vspace*{-0.25em}#1}\\a#2\\}%
+\ifthenelse{\equal{#1}{}}{}{{\itshape\footnotesize\vspace*{-0.25em}#1}\\#2\\}%
 }
 }
 
@@ -339,7 +329,7 @@
 
 \vspace{2cm plus 3.5cm minus 1.75cm}
 
-{\bfseries \TheSubject}
+{\bfseries \sffamily \TheSubject}
 
 \vspace{1cm plus 1cm minus 0.75cm}
 
