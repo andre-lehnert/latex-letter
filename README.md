@@ -53,7 +53,7 @@ Bezugszeile | ourref | yourref
 ### Betreff
 
 ```latex
-\subject{...}
+\subject{}
 ```
 
 ### Anrede und Schlussformel
