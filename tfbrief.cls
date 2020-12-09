@@ -92,6 +92,11 @@
   \renewcommand{\flagnofoldingmark}{yes}
 }
 
+\newcommand{\flagnomiddlefoldingmark}{}
+\DeclareOption{nomiddlefoldingmark}{%
+  \renewcommand{\flagnomiddlefoldingmark}{yes}
+}
+
 % use right-ragged (left-justified) text by default
 \newcommand{\textbodyalignment}{\RaggedRight}
 \DeclareOption{justify}{%
@@ -232,7 +237,9 @@
 \begin{picture}(0,0)%
 %% y-offset of 25 is required
 \put(-25,-81){\line(1,0){5}}%
-\put(-25,-124.5){\line(1,0){7}}%
+\ifthenelse{\equal{\flagnomiddlefoldingmark}{}}{
+  \put(-25,-124.5){\line(1,0){7}}%
+}{}%
 \put(-25,-186.5){\line(1,0){5}}%
 \end{picture}%
 }{}%
