@@ -10,6 +10,7 @@ Option | Funktion
 --- | ---
 `german, english, spanish, swedish` | Lokalisierung der Labels und voreingestellten Anrede- und Grußformeln, beim Laden von *babel* wird entsprechende Option übergeben
 `nofoldingmark` | keine Falzmarkierung ausgeben
+`nomiddlefoldingmark` | nur die mittlere Falzmarkierung unterdrücken
 `justify` | Brieftext im Blocksatz anstatt linksbündig
 `fromheadernarrow` | gibt die Absenderinformationen als schmaleren Block aus
 
